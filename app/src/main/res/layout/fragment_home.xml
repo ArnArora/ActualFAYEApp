@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:contentDescription="@string/logo_description"
     tools:context=".ui.home.HomeFragment">
 
     <TextView
@@ -11,7 +12,7 @@
         android:layout_width="279dp"
         android:layout_height="111dp"
         android:layout_marginTop="116dp"
-        android:text="Your Study Buddy"
+        android:text="@string/title_part2"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.568"
@@ -22,17 +23,18 @@
         android:id="@+id/imageView"
         android:layout_width="328dp"
         android:layout_height="208dp"
+        android:contentDescription="@string/logo_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome"
         app:srcCompat="@drawable/fayelogo" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="108dp"
-        android:text="AppName"
+        android:text="@string/app_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
