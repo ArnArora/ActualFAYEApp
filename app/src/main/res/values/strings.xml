@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ActualFAYEApp</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_studytips">Study Tips</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_part2">Your Study Buddy</string>
     <string name="logo_description">FAYE Logo</string>
