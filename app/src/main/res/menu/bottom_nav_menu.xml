@@ -7,13 +7,21 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_studytips"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
-
+        android:title="@string/title_studytips" />
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_stats"
         android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
+        android:title="@string/title_stats" />
+    <item
+        android:id="@+id/navigation_tasks"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_tasks" />
+    <item
+        android:id="@+id/navigation_mentalhealth"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="@string/title_mentalhealth" />
+
 
 </menu>

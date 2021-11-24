@@ -16,10 +16,20 @@
         android:name="com.example.actualfayeapp.ui.studytips.StudytipsFragment"
         android:label="@string/title_studytips"
         tools:layout="@layout/fragment_studytips" />
-
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.actualfayeapp.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_stats"
+        android:name="com.example.actualfayeapp.ui.stats.StatsFragment"
+        android:label="@string/title_stats"
+        tools:layout="@layout/fragment_stats" />
+    <fragment
+        android:id="@+id/navigation_mentalhealth"
+        android:name="com.example.actualfayeapp.ui.mentalhealth.MentalHealthFragment"
+        android:label="@string/title_mentalhealth"
+        tools:layout="@layout/fragment_mentalhealth" />
+    <fragment
+        android:id="@+id/navigation_tasks"
+        android:name="com.example.actualfayeapp.ui.tasks.TasksFragment"
+        android:label="@string/title_tasks"
+        tools:layout="@layout/fragment_tasks" />
+
 </navigation>

@@ -1,5 +1,4 @@
-package com.example.actualfayeapp.ui.dashboard;
-
+package com.example.actualfayeapp.ui.mentalhealth;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,18 +12,18 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.actualfayeapp.R;
+import com.example.actualfayeapp.ui.mentalhealth.MentalHealthViewModel;
 
-public class DashboardFragment extends Fragment {
-
-    private DashboardViewModel dashboardViewModel;
+public class MentalHealthFragment extends Fragment{
+    private MentalHealthViewModel mentalHealthViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        dashboardViewModel =
-                new ViewModelProvider(this).get(DashboardViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_dashboard, container, false);
-        final TextView textView = root.findViewById(R.id.text_dashboard);
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        mentalHealthViewModel =
+                new ViewModelProvider(this).get(MentalHealthViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_mentalhealth, container, false);
+        final TextView textView = root.findViewById(R.id.text_mentalhealth);
+        mentalHealthViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

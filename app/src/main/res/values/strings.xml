@@ -2,7 +2,19 @@
     <string name="app_name">ActualFAYEApp</string>
     <string name="title_home">Home</string>
     <string name="title_studytips">Study Tips</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_stats">Stats</string>
+    <string name="title_tasks">Tasks</string>
+    <string name="title_mentalhealth">Mental Health</string>
+    <!--home page-->
     <string name="title_part2">Your Study Buddy</string>
     <string name="logo_description">FAYE Logo</string>
+    <!--study stats-->
+    <string name="dates_studied">Hours Studied from %1$s - %2$s</string>
+    <!--study tips-->
+    <string name="pomodoro_title">The Pomodoro Technique</string>
+    <string name="pomodoro_info">Cool Pomodoro Info</string>
+    <string name="tipofday_title">Study Tip of the Day</string>
+    <string name="tipofday_content">The Actual Tip of the Day</string>
+    <!--mental health-->
+    <!--tasks-->
 </resources>

@@ -22,7 +22,7 @@ public class StudytipsFragment extends Fragment{
         studytipsViewModel =
                 new ViewModelProvider(this).get(StudytipsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_studytips, container, false);
-        final TextView textView = root.findViewById(R.id.text_studytips);
+        final TextView textView = root.findViewById(R.id.studytipstitle);
         studytipsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
