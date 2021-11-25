@@ -7,7 +7,7 @@ public class MentalHealthViewModel extends ViewModel {
 
     public MentalHealthViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is mentalhealth fragment");
+        mText.setValue("");
     }
 
     public LiveData<String> getText() {

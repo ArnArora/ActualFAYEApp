@@ -7,17 +7,117 @@
     tools:context=".ui.mentalhealth.MentalHealthFragment">
 
     <TextView
-        android:id="@+id/text_mentalhealth"
-        android:layout_width="match_parent"
+        android:id="@+id/mental_title"
+        android:layout_width="225dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="@string/title_mentalhealth"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/moodtrack"
+        android:layout_width="280dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="@string/mood_tracker_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mentaltip" />
+
+    <Button
+        android:id="@+id/fan"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="@string/fantastic"
+        android:onClick="chooseMood"
+        app:layout_constraintEnd_toStartOf="@+id/pg"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodtrack" />
+
+    <Button
+        android:id="@+id/pg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/pretty_good"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
+        app:layout_constraintTop_toBottomOf="@+id/moodtrack" />
+
+    <Button
+        android:id="@+id/inbet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/meh"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toEndOf="@+id/pg"
+        app:layout_constraintTop_toBottomOf="@+id/moodtrack" />
+
+    <Button
+        android:id="@+id/see_results"
+        android:layout_width="257dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="96dp"
+        android:text="@string/check_moods"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pg" />
+
+    <Button
+        android:id="@+id/mentaltip"
+        android:layout_width="312dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/mental_health_tip"
+        android:onClick="loadMental"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/quote" />
+
+    <Button
+        android:id="@+id/quote"
+        android:layout_width="311dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/quote_of_day"
+        android:onClick="loadQuote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mental_title" />
+
+    <Button
+        android:id="@+id/bad1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/little_down"
+        app:layout_constraintEnd_toStartOf="@+id/bad2"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pg" />
+
+    <Button
+        android:id="@+id/bad2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        android:text="@string/really_sad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pg" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@ public class StudytipsViewModel extends ViewModel{
 
     public StudytipsViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is study tips fragment");
+        mText.setValue("");
     }
 
     public LiveData<String> getText() {

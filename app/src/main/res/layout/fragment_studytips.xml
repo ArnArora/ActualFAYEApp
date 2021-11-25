@@ -20,24 +20,24 @@
 
     <TextView
         android:id="@+id/pomodoro_top"
-        android:layout_width="328dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="294dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="20dp"
         android:text="@string/pomodoro_title"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/studytipstitle" />
 
     <TextView
         android:id="@+id/pomodoro_content"
-        android:layout_width="487dp"
-        android:layout_height="223dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="374dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
         android:text="@string/pomodoro_info"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pomodoro_top" />
 
@@ -45,22 +45,24 @@
         android:id="@+id/todtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="20dp"
         android:text="@string/tipofday_title"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pomodoro_content" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="458dp"
-        android:layout_height="184dp"
-        android:layout_marginTop="72dp"
+    <Button
+        android:id="@+id/todcontent"
+        android:layout_width="373dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:onClick="loadTip"
         android:text="@string/tipofday_content"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/todtitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

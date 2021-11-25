@@ -14,7 +14,16 @@
     <string name="pomodoro_title">The Pomodoro Technique</string>
     <string name="pomodoro_info">Cool Pomodoro Info</string>
     <string name="tipofday_title">Study Tip of the Day</string>
-    <string name="tipofday_content">The Actual Tip of the Day</string>
+    <string name="tipofday_content">Click Here to See The Daily Study Tip</string>
     <!--mental health-->
+    <string name="quote_of_day">Click Here to See the Quote of the Day</string>
+    <string name="mental_health_tip">Click Here to See the Mental Health Tip of the Day</string>
+    <string name="mood_tracker_title">Mood Tracker: choose how you are feeling today</string>
+    <string name="fantastic">Fantastic</string>
+    <string name="pretty_good">Pretty good</string>
+    <string name="meh">In between</string>
+    <string name="little_down">A bit down</string>
+    <string name="really_sad">Having a rough day</string>
+    <string name="check_moods">Check your mood in the past week</string>
     <!--tasks-->
 </resources>
