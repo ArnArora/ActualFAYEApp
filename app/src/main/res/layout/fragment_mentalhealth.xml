@@ -70,6 +70,7 @@
         android:layout_width="257dp"
         android:layout_height="65dp"
         android:layout_marginTop="96dp"
+        android:onClick="displayMoods"
         android:text="@string/check_moods"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

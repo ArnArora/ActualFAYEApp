@@ -25,5 +25,10 @@
     <string name="little_down">A bit down</string>
     <string name="really_sad">Having a rough day</string>
     <string name="check_moods">Check your mood in the past week</string>
+    <string name="display_moods_title">Here is how you have felt in the past week</string>
+    <string name="display_moods_disclaimer">Note that if you did not track your mood on a day, it will show as blank</string>
+    <string name="display_average">Here is your average mood in the past week!</string>
+    <string name="sad">Sad</string>
+    <string name="happy">Happy</string>
     <!--tasks-->
 </resources>

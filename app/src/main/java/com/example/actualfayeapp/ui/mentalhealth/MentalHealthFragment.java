@@ -1,5 +1,6 @@
 package com.example.actualfayeapp.ui.mentalhealth;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,12 +15,14 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.actualfayeapp.DisplayMoodsActivity;
 import com.example.actualfayeapp.R;
 import com.example.actualfayeapp.ui.mentalhealth.MentalHealthViewModel;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class MentalHealthFragment extends Fragment{
@@ -40,15 +43,21 @@ public class MentalHealthFragment extends Fragment{
         });
         return root;
     }
+    public void displayMoods(View v){
+        //launch new activity
+        Context context = getActivity();
+        Intent intent = new Intent(context, DisplayMoodsActivity.class);
+        startActivity(intent);
+    }
     public void chooseMood(View v) {
         Context context = getActivity();
         Button b = (Button) v;
         Calendar cal = Calendar.getInstance();
-        int dayofWeek = cal.get(Calendar.DAY_OF_WEEK);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         SharedPreferences sharedPreferences = context.getSharedPreferences(MENTAL_SHARED, context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         //update change
-        editor.putString(Integer.toString(dayofWeek), b.getText().toString());
+        editor.putString(dateFormat.format(cal.getTime()), b.getText().toString());
         b.setBackgroundColor(304903);
         b.setEnabled(false);
         editor.apply();
