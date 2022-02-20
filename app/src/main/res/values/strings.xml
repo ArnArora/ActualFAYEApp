@@ -1,18 +1,22 @@
 <resources>
-    <string name="app_name">ActualFAYEApp</string>
+    <string name="app_name">FAYE Study Helper</string>
     <string name="title_home">Home</string>
     <string name="title_studytips">Study Tips</string>
-    <string name="title_stats">Stats</string>
-    <string name="title_tasks">Tasks</string>
+    <string name="title_stats">Your Study Statistics</string>
+    <string name="title_tasks">Your Tasks</string>
     <string name="title_mentalhealth">Mental Health</string>
     <!--home page-->
-    <string name="title_part2">Your Study Buddy</string>
+    <string name="app_description">FAYE Study Helper is a student’s best friend. It will keep track of your tasks, allow you to keep track of your mood, check how long you have been studying, give you daily tips, and more.</string>
     <string name="logo_description">FAYE Logo</string>
     <!--study stats-->
-    <string name="dates_studied">Hours Studied from %1$s - %2$s</string>
+    <string name="enter_stat_title">Enter how many hours you have studied today. </string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="enter">Enter</string>
+    <string name="statistics">Study Stats</string>
     <!--study tips-->
     <string name="pomodoro_title">The Pomodoro Technique</string>
-    <string name="pomodoro_info">Cool Pomodoro Info</string>
+    <string name="pomodoro_info">Invented by the Italian Francesco Cirillo, the Pomodoro Technique works by having a person work for 25 to 30 minute periods and then take breaks of 2-3 minutes. After four such sessions, the person takes a longer break. Having 25 minute work periods allows one to get some work done without feeling overwhelmed or burnt out. Of course, the exact number of minutes for the work time and break time will vary per person.</string>
     <string name="tipofday_title">Study Tip of the Day</string>
     <string name="tipofday_content">Click Here to See The Daily Study Tip</string>
     <!--mental health-->
@@ -31,4 +35,11 @@
     <string name="sad">Sad</string>
     <string name="happy">Happy</string>
     <!--tasks-->
+    <string name="choose_date">Select a date (in MM/dd/yyyy format): </string>
+    <string name="task_list">Tasks for today</string>
+    <string name="add_task">Add a task to the selected date: </string>
+    <string name="remove_task">Enter the task number to remove from this date: </string>
+    <string name="select">Select</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
 </resources>

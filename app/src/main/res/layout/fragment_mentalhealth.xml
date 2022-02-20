@@ -8,117 +8,148 @@
 
     <TextView
         android:id="@+id/mental_title"
-        android:layout_width="225dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:gravity="center"
-        android:text="@string/title_mentalhealth"
-        android:textSize="24sp"
+        android:text=""
+        android:textSize="2sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/moodtrack"
-        android:layout_width="280dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
         android:gravity="center"
-        android:textSize="18sp"
         android:text="@string/mood_tracker_title"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mentaltip" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/fan"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:background="@android:color/holo_green_dark"
         android:text="@string/fantastic"
-        android:onClick="chooseMood"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toStartOf="@+id/pg"
-        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moodtrack" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/pg"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:background="@android:color/holo_green_light"
         android:text="@string/pretty_good"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moodtrack" />
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/inbet"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/fan"
+        app:layout_constraintTop_toBottomOf="@+id/moodtrack"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/inbet"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
+        android:background="@android:color/holo_orange_light"
         android:text="@string/meh"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toEndOf="@+id/pg"
         app:layout_constraintTop_toBottomOf="@+id/moodtrack" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/see_results"
-        android:layout_width="257dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="96dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/purple_500"
+        android:gravity="center"
         android:onClick="displayMoods"
         android:text="@string/check_moods"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pg" />
+        app:layout_constraintTop_toBottomOf="@+id/bad2" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/mentaltip"
-        android:layout_width="312dp"
-        android:layout_height="78dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="24dp"
-        android:text="@string/mental_health_tip"
+        android:layout_marginRight="30dp"
+        android:background="@color/purple_500"
+        android:gravity="center"
         android:onClick="loadMental"
+        android:text="@string/mental_health_tip"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quote" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/quote"
-        android:layout_width="311dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/quote_of_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/purple_500"
         android:onClick="loadQuote"
+        android:text="@string/quote_of_day"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mental_title" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bad1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24sp"
+        android:background="@color/purple_500"
         android:text="@string/little_down"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toStartOf="@+id/bad2"
-        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pg" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bad2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
+        android:background="@android:color/holo_red_dark"
         android:text="@string/really_sad"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bad1"
         app:layout_constraintTop_toBottomOf="@+id/pg" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,12 +2,16 @@ package com.example.actualfayeapp.ui.mentalhealth;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,15 +29,40 @@ import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class MentalHealthFragment extends Fragment{
+public class MentalHealthFragment extends Fragment implements View.OnClickListener{
     private MentalHealthViewModel mentalHealthViewModel;
-    public static final String MENTAL_SHARED = "mentalSharedPrefs";
+    public final String MENTAL_SHARED = "com.example.actualfayeapp.mentalSharedPrefs";
     public View root;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         mentalHealthViewModel =
                 new ViewModelProvider(this).get(MentalHealthViewModel.class);
         root = inflater.inflate(R.layout.fragment_mentalhealth, container, false);
+        Button b = (Button) root.findViewById(R.id.quote);
+        b.setOnClickListener(this);
+        b = (Button) root.findViewById(R.id.mentaltip);
+        b.setOnClickListener(this);
+        b = (Button) root.findViewById(R.id.see_results);
+        b.setOnClickListener(this);
+        Button b1 = (Button) root.findViewById(R.id.bad1);
+        Button b2 = (Button) root.findViewById(R.id.bad2);
+        Button b3 = (Button) root.findViewById(R.id.pg);
+        Button b4 = (Button) root.findViewById(R.id.fan);
+        Button b5 = (Button) root.findViewById(R.id.inbet);
+        Button[] buttons = {b1, b2, b3, b4, b5};
+        for (Button item: buttons){
+            item.setOnClickListener(this);
+        }
+        Context context = getActivity();
+        String today = getDate();
+        SharedPreferences sharedPreferences = context.getSharedPreferences(MENTAL_SHARED, Context.MODE_PRIVATE);
+        String checking = sharedPreferences.getString(today, "Check your mood in the past week");
+        if (!(checking.equals("Check your mood in the past week"))){
+            for (Button item: buttons){
+                item.setBackgroundColor(Color.GRAY);
+                item.setEnabled(false);
+            }
+        }
         final TextView textView = root.findViewById(R.id.mental_title);
         mentalHealthViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
@@ -43,24 +72,76 @@ public class MentalHealthFragment extends Fragment{
         });
         return root;
     }
+    public String getDate(){
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
+        return dateFormat.format(cal.getTime());
+    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.quote:
+                loadQuote(v);
+                break;
+            case R.id.mentaltip:
+                loadMental(v);
+                break;
+            case R.id.see_results:
+                displayMoods(v);
+                break;
+            case R.id.bad1:
+                chooseMood(v, 1);
+                break;
+            case R.id.pg:
+                chooseMood(v, 2);
+                break;
+            case R.id.bad2:
+                chooseMood(v, 3);
+                break;
+            case R.id.fan:
+                chooseMood(v, 4);
+                break;
+            case R.id.inbet:
+                chooseMood(v, 5);
+                break;
+        }
+    }
     public void displayMoods(View v){
         //launch new activity
         Context context = getActivity();
         Intent intent = new Intent(context, DisplayMoodsActivity.class);
         startActivity(intent);
     }
-    public void chooseMood(View v) {
+    public void chooseMood(View v, int num) {
+        Button b = null;
+        switch (num){
+            case 1:
+                b = (Button) root.findViewById(R.id.bad1);
+                break;
+            case 2:
+                b = (Button) root.findViewById(R.id.pg);
+                break;
+            case 3:
+                b = (Button) root.findViewById(R.id.bad2);
+                break;
+            case 4:
+                b = (Button) root.findViewById(R.id.fan);
+                break;
+            case 5:
+                b = (Button) root.findViewById(R.id.inbet);
+                break;
+        }
         Context context = getActivity();
-        Button b = (Button) v;
+        b.setTextColor(Color.BLUE);
         Calendar cal = Calendar.getInstance();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-        SharedPreferences sharedPreferences = context.getSharedPreferences(MENTAL_SHARED, context.MODE_PRIVATE);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy");
+        SharedPreferences sharedPreferences = context.getSharedPreferences(MENTAL_SHARED, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         //update change
         editor.putString(dateFormat.format(cal.getTime()), b.getText().toString());
-        b.setBackgroundColor(304903);
+        editor.commit();
+        b.setTextColor(Color.GREEN);
         b.setEnabled(false);
-        editor.apply();
         //disable other buttons
         Button b1 = (Button) root.findViewById(R.id.bad1);
         Button b2 = (Button) root.findViewById(R.id.bad2);
@@ -70,6 +151,7 @@ public class MentalHealthFragment extends Fragment{
         Button[] buttons = {b1, b2, b3, b4, b5};
         for (Button item: buttons){
             if (item.isEnabled()){
+                item.setBackgroundColor(Color.GRAY);
                 item.setEnabled(false);
             }
         }
@@ -77,14 +159,14 @@ public class MentalHealthFragment extends Fragment{
     public void loadQuote(View v){
         Context context = getActivity();
         Calendar cal = Calendar.getInstance();
-        int dayofMonth = cal.get(Calendar.DAY_OF_MONTH);
+        int day = cal.get(Calendar.DAY_OF_YEAR);
         BufferedReader reader = null;
         String tip = "";
         try {
             reader = new BufferedReader(
                     new InputStreamReader(context.getAssets().open("quotes.txt")));
             // do reading, usually loop until end of file reading
-            for (int i = 0; i<(29*dayofMonth-1)%30; i++){
+            for (int i = 0; i<(day-1)%102; i++){
                 reader.readLine();
             }
             tip = reader.readLine();
@@ -106,14 +188,14 @@ public class MentalHealthFragment extends Fragment{
     public void loadMental(View v){
         Context context = getActivity();
         Calendar cal = Calendar.getInstance();
-        int dayofMonth = cal.get(Calendar.DAY_OF_MONTH);
+        int day = cal.get(Calendar.DAY_OF_YEAR);
         BufferedReader reader = null;
         String tip = "";
         try {
             reader = new BufferedReader(
                     new InputStreamReader(context.getAssets().open("mentalhealth.txt")));
             // do reading, usually loop until end of file reading
-            for (int i = 0; i<17*(dayofMonth-1)%30; i++){
+            for (int i = 0; i<(day-1)%20; i++){
                 reader.readLine();
             }
             tip = reader.readLine();

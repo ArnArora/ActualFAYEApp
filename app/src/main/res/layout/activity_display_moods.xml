@@ -1,15 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:fillViewport="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".DisplayMoodsActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/moodday1"
+                android:layout_weight="1"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="DATE"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+            <TextView
+                android:id="@+id/mood1"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="Mood"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/moodday2"
+                android:layout_weight="1"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="DATE"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+            <TextView
+                android:id="@+id/mood2"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="Mood"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/moodday3"
+                android:layout_weight="1"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="DATE"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+            <TextView
+                android:id="@+id/mood3"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="Mood"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/moodday4"
+                android:layout_weight="1"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="DATE"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+            <TextView
+                android:id="@+id/mood4"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="Modd"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/moodday5"
+                android:layout_weight="1"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="DATE"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+            <TextView
+                android:id="@+id/mood5"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="Mood"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/moodday6"
+                android:layout_weight="1"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="DATE"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+            <TextView
+                android:id="@+id/mood6"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="Mood"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/moodday7"
+                android:layout_weight="1"
+                android:background="#dcdcdc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="DATE"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+            <TextView
+                android:id="@+id/mood7"
+                android:layout_weight="1"
+                android:background="#d3d3d3"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="Mood"
+                android:textColor="#000000"
+                android:textSize="8dp" />
+
+        </TableRow>
+    </TableLayout>
 
     <TextView
         android:id="@+id/displaytitle"
-        android:layout_width="333dp"
-        android:layout_height="33dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_marginTop="36dp"
         android:text="@string/display_moods_title"
         android:textSize="16sp"
@@ -20,8 +220,11 @@
 
     <TextView
         android:id="@+id/displaydisclaim"
-        android:layout_width="296dp"
-        android:layout_height="62dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="28dp"
         android:text="@string/display_moods_disclaimer"
         android:textSize="18sp"
@@ -32,10 +235,12 @@
     <ProgressBar
         android:id="@+id/moodProgress"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="334dp"
+        android:layout_width="0dp"
         android:layout_height="26dp"
         android:layout_marginTop="4dp"
         android:progress="50"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,8 +248,9 @@
 
     <TextView
         android:id="@+id/averagetitle"
-        android:layout_width="314dp"
-        android:layout_height="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:layout_marginTop="36dp"
         android:text="@string/display_average"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +262,6 @@
         android:id="@+id/sadleft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:text="@string/sad"
         app:layout_constraintStart_toStartOf="parent"
@@ -66,10 +271,20 @@
         android:id="@+id/happyright"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
+        android:layout_marginRight="40dp"
         android:text="@string/happy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moodProgress" />
 
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="52dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodProgress" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

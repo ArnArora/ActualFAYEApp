@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.studytips.StudytipsFragment">
 
     <TextView
@@ -11,18 +11,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="@string/title_studytips"
-        android:textSize="36sp"
+        android:text=""
+        android:textSize="2sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/pomodoro_top"
-        android:layout_width="294dp"
-        android:layout_height="39dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:gravity="center"
         android:text="@string/pomodoro_title"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,11 +33,14 @@
 
     <TextView
         android:id="@+id/pomodoro_content"
-        android:layout_width="374dp"
-        android:layout_height="130dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
         android:gravity="center"
         android:text="@string/pomodoro_info"
+        android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pomodoro_top" />
@@ -53,13 +57,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pomodoro_content" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/todcontent"
-        android:layout_width="373dp"
-        android:layout_height="81dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:background="@color/purple_500"
+        android:textColor="@android:color/white"
         android:gravity="center"
-        android:onClick="loadTip"
         android:text="@string/tipofday_content"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
